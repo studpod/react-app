@@ -1,6 +1,5 @@
 
 import './App.css';
-import ReactDOM from 'react-dom/client';
 import React, {useState} from 'react';
 import AddItemForm from './AddItemForm';
 
@@ -24,9 +23,5 @@ function Item() {
     </>
   );
 }
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<Item />);
-
 
 export default Item;
