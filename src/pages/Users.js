@@ -1,8 +1,9 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
-
+import {ThemeContext} from '../ThemeContext'
 
 const Users = () =>{
+    const {theme} = useContext(ThemeContext);
     const users = [
         { id: 1, name: 'Oliver Johnson' },
         { id: 2, name: 'John Johnson' },
@@ -10,7 +11,7 @@ const Users = () =>{
     ];
    
     return (
-        <div>
+        <div className={theme === 'light' ? 'users-light' : 'users-dark'} >
             <h1>Users Page</h1>
             <ul>
                 {users.map(user => (

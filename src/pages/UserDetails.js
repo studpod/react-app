@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
+import {ThemeContext} from '../ThemeContext';
 
 const UserDetails = () => {
+    const { theme } = useContext(ThemeContext);
     const { id } = useParams();
 
     // Статичні дані користувачів
@@ -15,7 +17,7 @@ const UserDetails = () => {
     const user = users.find(user => user.id === id);
 
     return (
-        <div>
+        <div className={theme === 'light' ? 'user-details-light' : 'user-details-dark'} >
             <h1>User Details Page</h1>
             {user ? (
                 <>
