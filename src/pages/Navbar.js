@@ -2,8 +2,11 @@ import React, { useContext } from "react";
 import { Outlet, Link } from "react-router-dom";
 import { ThemeContext } from '../ThemeContext';
 
+
 const Navbar = () => {
   const { theme, toggleTheme } = useContext(ThemeContext);
+  
+
   return (
     <>
     <nav className={theme === 'light' ? 'navbar-light' : 'navbar-dark'}>

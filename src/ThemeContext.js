@@ -1,4 +1,3 @@
-// src/ThemeContext.js
 import React, { createContext, useState } from 'react';
 
 // Створюємо контекст теми
