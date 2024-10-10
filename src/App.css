@@ -82,3 +82,28 @@
     background-color: red;
   }
 }
+
+.animated-box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  margin: 70px;
+  animation: colorAndSizeAnimation 7s ease-in-out forwards;
+}
+
+@keyframes colorAndSizeAnimation {
+  0% {
+    background-color: red;
+    transform: scale(1) rotate(0deg);
+  }
+
+  50% {
+    background-color: green;
+    transform: scale(2) rotate(0deg);
+  }
+
+  100% {
+    background-color: red;
+    transform: scale(1) rotate(180deg);
+  }
+}

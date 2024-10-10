@@ -2,9 +2,10 @@ import React, {useState} from 'react';
 import Square from './components/Square';
 import BoxAnimation from './components/BoxAnimation';
 import RotatingCircle from './components/RotatingCircle';
+import AnimatedComponent from './components/AnimationElement';
 import './App.css';
 
-const Button = () => {
+const App = () => {
   const [hovered, setHovered] = useState(false);
   const handleMouseEnter = () => {
     setHovered(true);
@@ -30,8 +31,11 @@ const Button = () => {
       <div>
         <RotatingCircle />
       </div>
+      <div>
+        <AnimatedComponent />
+      </div>
     </div>
    
     
   );
-};export default Button;
+};export default App;
