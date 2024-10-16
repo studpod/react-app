@@ -2,6 +2,7 @@ import React from 'react';
 import ParallaxElement from './components/ParallaxElement';
 import MovingElement from './components/CurveMovement';
 import AnimatedBox from './components/AnimatedBox';
+import AnimationDelay from './components/AnimationDelay';
 
 const App = () => {
   return (
@@ -28,6 +29,13 @@ const App = () => {
     </div>
     <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
       <AnimatedBox />
+    </div>
+    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '100px' }}>
+      
+      <AnimationDelay delay={0} backgroundColor="tomato" />
+      <AnimationDelay delay={0.5} backgroundColor="dodgerblue" />
+      <AnimationDelay delay={1} backgroundColor="seagreen" />
+      <AnimationDelay delay={1.5} backgroundColor="purple" />
     </div>
     </div>
   );
