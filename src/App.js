@@ -3,6 +3,7 @@ import ParallaxElement from './components/ParallaxElement';
 import MovingElement from './components/CurveMovement';
 import AnimatedBox from './components/AnimatedBox';
 import AnimationDelay from './components/AnimationDelay';
+import GestureBox from './components/GestureBox';
 
 const App = () => {
   return (
@@ -36,6 +37,9 @@ const App = () => {
       <AnimationDelay delay={0.5} backgroundColor="dodgerblue" />
       <AnimationDelay delay={1} backgroundColor="seagreen" />
       <AnimationDelay delay={1.5} backgroundColor="purple" />
+    </div>
+    <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+      <GestureBox />
     </div>
     </div>
   );
