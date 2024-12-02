@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Header from './components/Header';
+import UserProfile from './components/UserProfile';
+import Footer from './components/Footer';
 
-function App() {
+const App = () => {
+  const [user, setUser] = useState(null);
+
+  const fetchUser = () => {
+    // Імітація API-запиту
+    setTimeout(() => {
+      setUser({ name: 'John Doe', email: 'john.doe@example.com' });
+    }, 1000);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <button onClick={fetchUser}>Load User</button>
+      <UserProfile user={user} />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;
